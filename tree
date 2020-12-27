@@ -1,0 +1,35 @@
+PackageDef(
+  Ident(<empty>),
+  List(
+    ClassDef(
+      Modifiers(MODULE),
+      root,
+      List(),
+      Template(
+        List(TypeTree()),
+        noSelfType,
+        List(
+          ValDef(Modifiers(PRIVATE | LOCAL), TermName(\"f \"), TypeTree().setOriginal(AppliedTypeTree(Select(Ident(scala), scala.Function1), List(TypeTree().setOriginal(SingletonTypeTree(Ident(TermName(\"impl\")))), TypeTree().setOriginal(Select(Ident(scala), scala.Unit))))), EmptyTree),
+          DefDef(Modifiers(METHOD | STABLE | ACCESSOR), TermName(\"f\"), List(), List(List()), TypeTree().setOriginal(AppliedTypeTree(Select(Ident(scala), scala.Function1), List(TypeTree().setOriginal(SingletonTypeTree(Ident(TermName(\"impl\")))), TypeTree().setOriginal(Select(Ident(scala), scala.Unit))))), Select(This(TypeName(\"root\")), TermName(\"f \"))),
+          DefDef(
+            Modifiers(FINAL | METHOD | ARTIFACT),
+            TermName(\"$anonfun$f$1\"),
+            List(),
+            List(List(ValDef(Modifiers(PARAM | SYNTHETIC), TermName(\"x0$1\"), TypeTree(), EmptyTree))),
+            TypeTree(),
+            Block(
+              List(
+                ValDef(Modifiers(CASE | SYNTHETIC), TermName(\"x1\"), TypeTree(), Ident(TermName(\"x0$1\"))),
+                LabelDef(TermName(\"case5\"), List(), If(Apply(Select(Ident(TermName(\"x1\")), TermName(\"ne\")), List(Literal(Constant(null)))), Apply(Ident(TermName(\"matchEnd4\")), List(Select(Select(Select(Ident(scala), scala.runtime), scala.runtime.BoxedUnit), TermName(\"UNIT\")))), Apply(Ident(TermName(\"case6\")), List()))),
+                LabelDef(TermName(\"case6\"), List(), Apply(Ident(TermName(\"matchEnd4\")), List(Throw(Apply(Select(New(TypeTree()), termNames.CONSTRUCTOR), List(Ident(TermName(\"x1\"))))))))
+              ),
+              LabelDef(TermName(\"matchEnd4\"), List(Ident(TermName(\"x\"))), Literal(Constant(())))
+            )
+          ),
+          DefDef(Modifiers(), termNames.CONSTRUCTOR, List(), List(List()), TypeTree(), Block(List(Apply(Select(Super(This(TypeName(\"root\")), typeNames.EMPTY), termNames.CONSTRUCTOR), List()), Assign(Select(This(TypeName(\"root\")), TermName(\"f \")), Block(List(), Apply(Ident(TermName(\"$anonfun\")), List())))), Literal(Constant(())))),
+          DefDef(Modifiers(FINAL | METHOD | LOCAL | STATIC | LIFTED | ARTIFACT | NOTPRIVATE), TermName(\"$anonfun$f$1$adapted\"), List(), List(List(ValDef(Modifiers(PARAM | SYNTHETIC), TermName(\"x0$1\"), TypeTree(), EmptyTree))), TypeTree(), Block(List(Apply(Select(This(TypeName(\"root\")), TermName(\"$anonfun$f$1\")), List(Ident(TermName(\"x0$1\"))))), Select(Select(Select(Ident(scala), scala.runtime), scala.runtime.BoxedUnit), TermName(\"UNIT\"))))
+        )
+      )
+    ),
+    ClassDef(Modifiers(MODULE), root$impl, List(), Template(List(TypeTree()), noSelfType, List(DefDef(Modifiers(), termNames.CONSTRUCTOR, List(), List(List()), TypeTree(), Block(List(Apply(Select(Super(This(TypeName(\"root$impl\")), typeNames.EMPTY), termNames.CONSTRUCTOR), List())), Literal(Constant(()))))))))
+)
